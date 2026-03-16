@@ -1,0 +1,16 @@
+电脑磁盘空间占用Top20文件扫描结果（按大小排序）：
+
+1. C:\pagefile.sys - 6,144.00 MB （Windows页面文件）
+2. C:\hiberfil.sys - 4,096.00 MB （Windows休眠文件）
+3. C:\Users\XIAO KA\AppData\Local\Temp\Chrome_Test_Type_2ef44\TEST - 158.55 MB （Chrome临时测试文件）
+4. C:\Users\XIAO KA\Downloads\WeChat_Setup_x64(1).exe - 139.35 MB （微信安装程序副本）
+5. C:\Users\XIAO KA\Downloads\WeChat_Setup_x64.exe - 139.35 MB （微信安装程序）
+6-20. C:\Users\XIAO KA\Downloads\mmbizwapk_*.apk 系列文件 - 每个约125.06 MB （微信小程序APK文件，共15个）
+
+总计：系统文件占用约10.24GB，下载文件夹中的微信相关文件占用约2.09GB
+
+建议清理：
+1. 删除Downloads文件夹中的重复微信安装程序
+2. 保留最新的一个mmbizwapk APK文件，删除其他重复文件
+3. 系统文件（pagefile.sys和hiberfil.sys）属于Windows正常运行所需，不建议随意删除
+   - 如需释放空间，可考虑调整虚拟内存大小或关闭休眠功能

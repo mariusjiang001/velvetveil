@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "skills": {
+    "self-improving-agent": {
+      "version": "3.0.1",
+      "installedAt": 1773317792582
+    },
+    "proactive-agent-lite": {
+      "version": "1.0.0",
+      "installedAt": 1773330744237
+    },
+    "memory-setup": {
+      "version": "1.0.0",
+      "installedAt": 1773330808745
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1773331989036
+    },
+    "tavily-search-1-0-0": {
+      "version": "1.0.0",
+      "installedAt": 1773370445184
+    },
+    "shopify": {
+      "version": "1.0.1",
+      "installedAt": 1773371136724
+    },
+    "ecommerce": {
+      "version": "1.0.0",
+      "installedAt": 1773371171910
+    },
+    "copywriting": {
+      "version": "0.1.0",
+      "installedAt": 1773371176990
+    },
+    "web": {
+      "version": "1.0.0",
+      "installedAt": 1773371284721
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1773389286398
+    },
+    "woocommerce": {
+      "version": "1.0.3",
+      "installedAt": 1773394294896
+    },
+    "wordpress-wp-cli-admin": {
+      "version": "0.5.0",
+      "installedAt": 1773396164444
+    },
+    "wordpress-pro": {
+      "version": "0.1.0",
+      "installedAt": 1773396192254
+    },
+    "alipay": {
+      "version": "1.0.0",
+      "installedAt": 1773396380242
+    },
+    "wechat-mp-cn": {
+      "version": "1.0.0",
+      "installedAt": 1773396403040
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1773546222092
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1773546233227
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1773546275236
+    },
+    "polymarketodds-1-0-0": {
+      "version": "1.0.0",
+      "installedAt": 1773546307305
+    }
+  }
+}

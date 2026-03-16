@@ -1,0 +1,1 @@
+Get-ChildItem -Path 'C:\Users' -File -ErrorAction SilentlyContinue | Select-Object FullName, Length | Sort-Object Length -Descending | Select-Object -First 20 | ForEach-Object { "{0} {1:N0} bytes" -f $_.FullName, $_.Length } | Out-File -FilePath 'C:\Users\XIAO KA\.openclaw\workspace\bigfiles.txt' -Encoding UTF8

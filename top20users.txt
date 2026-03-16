@@ -1,0 +1,10 @@
+﻿
+FullName                                      Length
+--------                                      ------
+C:\Users\XIAO_000_vcRuntimeMinimum_x64.log    273496
+C:\Users\XIAO_000_vcRuntimeMinimum_x86.log    262188
+C:\Users\XIAO_001_vcRuntimeAdditional_x86.log 256474
+C:\Users\XIAO_001_vcRuntimeAdditional_x64.log 246918
+C:\Users\XIAO                                      0
+
+

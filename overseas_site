@@ -1,0 +1,133 @@
+# Overseas Independent Site Project (Middleman Model)
+
+## Vision
+Build a standalone e-commerce site targeting overseas consumers, sourcing quality products from Chinese manufacturers, localizing content (copy, images, videos), handling payment/logistics, and providing intelligent customer service.
+
+## Core Workflow
+1. **Product Sourcing** – Find reliable suppliers on 1688.com, Alibaba.com, Made-in-China, etc.
+2. **Product Validation** – Order samples, check quality, certifications.
+3. **Content Localization**
+   - Translate & rewrite product titles/descriptions (use copywriting skill).
+   - Edit product images (remove watermarks, add lifestyle shots).
+   - Edit/create short product videos (use CapCut, InShot, or AI video tools).
+4. **Site Setup**
+   - Choose platform: Shopify (quick start), WooCommerce (WordPress), or headless (Next.js + Snipcart).
+   - Configure multi-currency (USD, EUR, etc.), language (English primary).
+   - Set up tax/VAT rules for target regions.
+5. **Upload & Optimize**
+   - Bulk import products via CSV (SKU, title, description, price, images, variants).
+   - SEO: meta titles, alt text, structured data.
+6. **Payment & Logistics**
+   - Payment gateways: Stripe, PayPal, Klarna, local credit cards.
+   - Logistics partners: ShipStation, Easyship, or direct cooperation with CN→global freight (DHL, UPS, China Post EMS).
+   - Enable real‑time shipping rates & tracking.
+7. **Intelligent Customer Service**
+   - AI chatbot (trained on FAQ, product info, policy) – can use OpenClaw agent-browser skill to scrape FAQs.
+   - Live chat fallback (Zendesk, Tidio, or WhatsApp Business).
+8. **Operations & Maintenance**
+   - Inventory sync (via supplier API or manual CSV updates).
+   - Order monitoring, fraud prevention.
+   - Marketing: email flows (Klaviyo), social ads (FB/IG/TikTok), SEO blog.
+   - Analytics: Google Analytics, Meta Pixel, heatmaps.
+
+## Suggested Tech Stack (Low‑code / Fast Launch)
+| Component | Option | Why |
+|-----------|--------|-----|
+| Storefront | **Shopify** (Basic plan) | Quick setup, built‑in payments, multi‑currency, extensive app ecosystem |
+| Theme | Dawn (free) + custom sections | Clean, mobile‑first, easy to edit |
+| Product Import | Shopify CSV import + Matrixify app | Handles variants, images, SEO fields |
+| Translation | LangShop app (or manual CSV translation) | Auto‑translate + human review |
+| Video | Embed from YouTube/Vimeo or upload directly | Shopify supports MP4 up to 4GB |
+| AI Copy | Use OpenClaw copywriting skill to generate descriptions, then paste |
+| AI Chatbot | **Tidio** (free tier) + train with FAQs, or integrate with Dialogflow via webhook |
+| Analytics | Google Analytics 4 + Facebook Pixel | Standard tracking |
+| Email Marketing | Klaviyo (free up to 250 contacts) | Segmentation, automation |
+| Logistics | **ShipStation** (connects to Shopify) | Rate shopping, label printing, tracking |
+| Accounting | QuickBooks Online or Xero (optional) | Sync payouts |
+
+## Step‑by‑Step Starter Guide (Shopify Example)
+
+### 1. Store Creation
+- Sign up at shopify.com → choose store name (e.g., `aiva-global.myshopify.com`).
+- Select plan (Basic Shopify $29/mo) – enables credit card processing.
+
+### 2. Basic Settings
+- **Settings → Payments**: Activate Shopify Payments (supports Visa/MC/Amex) + PayPal.
+- **Settings → Checkout**: Enable customer accounts (optional), set up abandoned cart recovery.
+- **Settings → Languages**: Add English (primary); optionally add other EU languages via LangShop.
+- **Settings → Markets**: Create markets for United States, Europe, Canada, Australia; enable currency conversion.
+
+### 3. Theme Setup
+- Online Store → Themes → Customize Dawn.
+- Upload logo, set colors (match brand identity), configure header/footer.
+- Add sections: Hero banner, Featured collection, Product grid, Trust badges, Newsletter.
+
+### 4. Prepare Product Data
+- Create a spreadsheet with columns:
+  ```
+  Handle, Title, Body (HTML), Vendor, Type, Tags, Published, Option1 Name, Option1 Value,
+  Variant SKU, Variant Grams, Variant Inventory Tracker, Variant Inventory Qty,
+  Variant Inventory Policy, Variant Fulfillment Service, Variant Price,
+  Compare At Price, Variant Requires Shipping, Variant Taxable, Variant Barcode,
+  Image Src, Image Position, Image Alt Text, Gift Card, SEO Title, SEO Description,
+  Google Shopping / MPN, Google Shopping / Age Group, Google Shopping / Gender,
+  Variant Image, Variant Weight Unit, Variant Tax Code, Cost per item
+  ```
+- Fill with data sourced from 1688/Alibaba:
+  - Title: English, benefit‑focused (use copywriting skill).
+  - Body: HTML description with bullet points, usage instructions, size chart.
+  - Images: Download main image + alternate angles; host on Shopify (or external CDN).
+  - Variants: Size, color, etc.
+
+### 5. Import Products
+- Apps → Import CSV (or use Matrixify for advanced mapping).
+- Map columns to Shopify fields.
+- Run import → verify a few products.
+
+### 6. Localize Media
+- Use image editor (Photoshop, GIMP, or free PhotoPea) to:
+  - Remove supplier watermarks.
+  - Add lifestyle shots (can source from Unsplash/Pexels or request from supplier).
+  - Add badge: “Ships from China – Fast Global Delivery”.
+- For videos:
+  - Download raw video from supplier.
+  - Edit with CapCut: add subtitles (English), trim to 15‑30s, add background music, brand intro/outro.
+  - Upload to Shopify product media or host on YouTube and embed.
+
+### 7. Set Up Intelligent Customer Service
+- Install **Tidio** app.
+- Create FAQ list: Shipping times, Returns policy, Payment safety, Product usage.
+- Enable AI Answer Bot (trained on FAQ).
+- Add WhatsApp Button (via Tidio or separate widget) for real‑time human support.
+
+### 8. Configure Logistics
+- Install **ShipStation** (or **Easyship**) app.
+- Connect carrier accounts (DHL, UPS, FedEx, China Post).
+- Set shipping rules: Free shipping over $50, flat rate $8, etc.
+- Enable real‑time rates at checkout.
+
+### 9. Launch & Promote
+- Disable password protection → store live.
+- Submit sitemap to Google Search Console.
+- Install Facebook & Google channels → sync product catalog for ads.
+- Create launch discount code (e.g., WELCOME10) → promote via email/social.
+
+### 10. Ongoing Ops
+- Daily: Check orders, fulfill via supplier (dropshipping) or your own warehouse.
+- Weekly: Update inventory CSV if supplier provides stock feed.
+- Monthly: Review ad performance, A/B test product pages, refresh creatives.
+
+## How OpenClaw Can Help
+- **Copywriting**: Use the `copywriting` skill to generate benefit‑rich product titles/descriptions.
+- **Web Search / Agent‑Browser**: Use `web_search` or the `agent-browser` skill to find suppliers, check product reviews, scrape FAQ pages.
+- **File Ops**: Automate CSV generation, image renaming, video metadata embedding.
+- **Memory**: Store supplier contacts, SOPs, and past campaign results in `MEMORY.md` for quick reference.
+
+## Next Immediate Actions (you can choose)
+1. **Confirm target markets** (e.g., USA + EU) and average price tier.
+2. **Select 5‑10 pilot products** from a supplier (provide links or CSV).
+3. **Decide on store platform** (Shopify recommended for speed; otherwise WooCommerce/Headless).
+4. **Provide brand assets** (logo, color palette, tone of voice) if you have them; otherwise I can suggest a simple starter identity.
+5. **Optional**: I can generate a sample product CSV and a basic Shopify theme snippet to get you started today.
+
+Let me know which part you’d like to dive into first, and I’ll deliver concrete files/commands or a sub‑agent to handle the repetitive work. 🌸
